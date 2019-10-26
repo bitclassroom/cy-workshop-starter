@@ -1,0 +1,14 @@
+{
+    "name": "cy-workshop-starter",
+    "version": "1.0.0",
+    "author": "Marko Arsic",
+    "license": "MIT",
+    "scripts": {
+        "server": "yarn --cwd ./server run start",
+        "client": "yarn --cwd ./client run start",
+        "dev": "concurrently -k \"yarn run server\" \"yarn run client\""
+    },
+    "devDependencies": {
+        "concurrently": "^5.0.0"
+    }
+}
