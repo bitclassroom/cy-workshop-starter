@@ -3,7 +3,7 @@
         "lib": ["dom", "esnext"],
         "jsx": "react",
         "target": "ES6",
-        "checkJs": true
+        "checkJs": false
     },
     "include": ["src/**/*"]
 }

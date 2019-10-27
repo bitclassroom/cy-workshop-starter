@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Footer = () => (
+const Footer = ({ tasksCount }) => (
     <footer className="footer">
         <span className="todo-count">
-            <strong>0</strong> tasks left
+            <strong data-cy="tasks-count">{tasksCount}</strong> tasks left
         </span>
         <ul className="filters">
             <li>

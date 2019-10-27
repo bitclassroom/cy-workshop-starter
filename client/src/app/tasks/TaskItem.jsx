@@ -1,10 +1,10 @@
 import React from 'react'
 
 const TaskItem = props => (
-    <li>
+    <li data-cy="task-item">
         <div className="view">
             <input className="toggle" type="checkbox" />
-            <label> </label>
+            <label>{props.task.name}</label>
             <button className="destroy" />
         </div>
     </li>

@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "Learn more JavaSctipt",
+        "isComplete": false
+    },
+    {
+        "id": 2,
+        "name": "Go to shopping",
+        "isComplete": true
+    },
+    {
+        "id": 3,
+        "name": "Go to Sleep",
+        "isComplete": false
+    }
+]
