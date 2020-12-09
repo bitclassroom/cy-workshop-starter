@@ -17,8 +17,13 @@ describe('App initialization', () => {
     })
 
     it('shows wait for tasks', () => {
-        cy.server()
-        cy.route('GET', '/tasks').as('tasks')
+        // cy.intercept('GET', '/tasks', { fixture: 'tasks' }).as('tasks')
+        cy.intercept({
+            method: 'GET',
+            path: '/tasks',
+            fixture: 'tasks',
+        }).as('tasks')
+
         cy.visit('/')
 
         cy.wait('@tasks')
@@ -27,13 +32,13 @@ describe('App initialization', () => {
     })
 
     it('shows show error on load', () => {
-        cy.server()
-        cy.route({
-            url: '/tasks',
+        cy.intercept({
             method: 'GET',
+            pathname: '/tasks',
             status: 500,
-            response: {}
+            response: {},
         })
+
         cy.visit('/')
         cy.get('[data-cy=task-item]').should('not.exist')
     })

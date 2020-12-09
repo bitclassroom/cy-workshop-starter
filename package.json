@@ -1,8 +1,13 @@
 {
     "name": "cy-workshop-starter",
     "version": "1.0.0",
+    "private": true,
     "author": "Marko Arsic",
     "license": "MIT",
+    "workspaces": [
+        "client",
+        "server"
+    ],
     "scripts": {
         "server": "yarn --cwd ./server run start",
         "client": "yarn --cwd ./client run start",
@@ -10,6 +15,7 @@
         "cy": "yarn --cwd ./client run cy:open"
     },
     "devDependencies": {
-        "concurrently": "^5.0.0"
+        "concurrently": "^5.0.0",
+        "prettier": "^2.2.1"
     }
 }
